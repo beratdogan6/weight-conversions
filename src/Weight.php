@@ -2,7 +2,8 @@
 
 namespace Beratdogan6\WeightConversions;
 
-class Weight {
+class Weight
+{
     public static function kilograms(float $kiloagrams): self
     {
         return new static($kiloagrams);
