@@ -3,14 +3,16 @@
 namespace Beratdogan6\WeightConversions;
 
 class Weight {
+    protected float $kilograms;
+
     public static function kilograms(float $kiloagrams): self
     {
         return new static($kiloagrams);
     }
 
-    public function __construct(protected float $kilograms)
+    public function __construct(float $kilograms)
     {
-        // Constructor code here
+        $this->kilograms = $kilograms;
     }
 
     public function toPounds(): float
