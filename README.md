@@ -4,7 +4,8 @@
 [![Tests](https://img.shields.io/github/actions/workflow/status/beratdogan6/weight-conversions/run-tests.yml?branch=main&label=tests&style=flat-square)](https://github.com/beratdogan6/weight-conversions/actions/workflows/run-tests.yml)
 [![Total Downloads](https://img.shields.io/packagist/dt/beratdogan6/weight-conversions.svg?style=flat-square)](https://packagist.org/packages/beratdogan6/weight-conversions)
 
-This is where your description should go. Try and limit it to a paragraph or two. Consider adding a small example.
+Simple class to convert between common weight units. You can start from any
+supported unit and convert it to another using expressive methods.
 
 ## Installation
 
@@ -17,8 +18,10 @@ composer require beratdogan6/weight-conversions
 ## Usage
 
 ```php
-$skeleton = new Beratdogan6\WeightConversions();
-echo $skeleton->echoPhrase('Hello, Beratdogan6!');
+use Beratdogan6\WeightConversions\Weight;
+
+$pounds = Weight::kilograms(100)->toPounds(); // 220.462
+$kilograms = Weight::pounds(10)->toKilograms(); // 4.53592
 ```
 
 ## Testing
